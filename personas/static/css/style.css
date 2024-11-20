@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #002a5c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004080;
+}
+
+/* Result Section */
+h2 {
+    color: #002a5c;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e9f0f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Styles */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #003366;
+}
+
+/* Error Message */
+.error-message {
+    color: #b30000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #002a5c;
+    color: #fff;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.footer-image {
+    text-align: center; /* Centra la imagen */
+    margin-top: 10px;   /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.footer-image img {
+    width: 150px;       /* Ajusta el ancho de la imagen */
+    height: auto;       /* Mantiene las proporciones */
+    display: inline-block;
+}

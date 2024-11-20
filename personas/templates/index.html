@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar por DNI</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Secretaría de Asuntos Docentes de José C. Paz - Búsqueda de Resoluciones</h1>
+    </header>
+
+    <div class="container">
+        <h2>Buscar por DNI</h2>
+        <form method="get">
+            <input type="text" name="dni" placeholder="Ingrese su DNI">
+            <button type="submit">Buscar</button>
+        </form>
+
+        {% if persona %}
+            <h2>Resultado para DNI {{ dni }}</h2>
+            <p><strong>Nombre:</strong> {{ persona.nombre }}</p>
+            <h3>Documentos relacionados:</h3>
+            <ul>
+                {% for documento in documentos %}
+                    <li>
+                        <strong>Descripción:</strong> {{ documento.descripcion }}<br>
+                        <a href="{{ documento.pdf_url }}" target="_blank">Ver Documento</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elif dni %}
+            <p class="error-message">No se encontró ninguna persona con el DNI {{ dni }}</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Secretaría de Asuntos Públicos Docentes de José C.Paz. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="footer-image">
+        <img src="{% static 'images/sadlogo.jpg' %}" alt="logo de sad">
+    </div>
+</body>
+</html>
